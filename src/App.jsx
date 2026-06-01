@@ -480,8 +480,8 @@ function Contact() {
               Whether it is a luxury residence, a sophisticated workspace, or a landmark development, our team is committed to delivering excellence through innovation, craftsmanship, and detail-driven execution.
             </p>
             {[
-              { label: 'CORPORATE OFFICE & SYSTEM WINDOWS EXPERIENCE CENTRE', text: <>Plot #24, IIIrd Floor, SNR Building,<br />Shilpi Ally, Vittal Rao Nagar Road,<br />Hitech City, Hyderabad – 500 081</> },
-              { label: 'INTERIORS EXPERIENCE CENTRE', text: 'Jubilee Hills, Hyderabad' },
+              { label: 'CORPORATE OFFICE & SYSTEM WINDOWS EXPERIENCE CENTRE', text: <>Plot #24, IIIrd Floor, SNR Building,<br />Shilpi Ally, Vittal Rao Nagar Road,<br />Hitech City, Hyderabad, Telangana – 500081</> },
+              { label: 'INTERIORS EXPERIENCE CENTRE', text: <>Plot #790, 4th Floor,<br />Above Rangoli Sarees,<br />Road No. 36, CBI Colony, Jubilee Hills,<br />Hyderabad, Telangana - 500033</> },
             ].map((a, i) => (
               <div key={i} style={{ marginBottom: i === 0 ? '1.6rem' : 0 }}>
                 <span style={{ fontSize: '0.58rem', letterSpacing: '0.2em', color: C.gold, display: 'block', marginBottom: '0.5rem' }}>{a.label}</span>
