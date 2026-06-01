@@ -496,7 +496,7 @@ function Contact() {
               {CONTACT_ROWS.map((row, i) => (
                 <div key={i} style={{ padding: '1.4rem 0', borderBottom: `1px solid ${C.divider}`, display: 'flex', alignItems: 'baseline', gap: '2rem' }}>
                   <span style={{ fontSize: '0.6rem', letterSpacing: '0.2em', color: C.gold, minWidth: '68px', flexShrink: 0 }}>{row.label}</span>
-                  <a href={row.href} style={{ fontFamily: sans-serif, fontSize: isMobile ? '1rem' : '1.12rem', color: C.charcoal, fontWeight: 400, wordBreak: 'break-all' }}>{row.value}</a>
+                  <a href={row.href} style={{ fontFamily: SANS, fontSize: isMobile ? '1rem' : '1.12rem', color: C.charcoal, fontWeight: 400, wordBreak: 'break-all' }}>{row.value}</a>
                 </div>
               ))}
             </div>
