@@ -132,8 +132,8 @@ export const CLIENTELE = [
 
 export const CONTACT_ROWS = [
   { label: 'PHONE',   value: '+91 91143 99399',  href: 'tel:+919114399399' },
-  { label: 'EMAIL',   value: 'hello@vinitil.com', href: 'mailto:hello@vinitil.com' },
-  { label: 'WEBSITE', value: 'www.vinitil.com',   href: 'https://www.vinitil.com' },
+  { label: 'EMAIL',   value: 'HELLO@VINITIL.COM', href: 'mailto:hello@vinitil.com' },
+  { label: 'WEBSITE', value: 'WWW.VINITIL.COM',   href: 'https://www.vinitil.com' },
 ]
 
 export const MARQUEE_ITEMS = [
