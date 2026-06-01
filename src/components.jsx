@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import { useInView } from './hooks.js'
+import { C, SANS } from './constants.js'
 
-// ─── FadeIn wrapper ──────────────────────────────────────────────────────────
+// ─── Scroll-triggered fade-in wrapper ────────────────────────────────────────
 export function FadeIn({ children, delay = 0, style = {} }) {
   const [ref, visible] = useInView()
   return (
@@ -8,7 +10,7 @@ export function FadeIn({ children, delay = 0, style = {} }) {
       ref={ref}
       style={{
         opacity:    visible ? 1 : 0,
-        transform:  visible ? 'translateY(0)' : 'translateY(28px)',
+        transform:  visible ? 'translateY(0)' : 'translateY(26px)',
         transition: `opacity 0.85s ease ${delay}s, transform 0.85s ease ${delay}s`,
         ...style,
       }}
@@ -18,12 +20,12 @@ export function FadeIn({ children, delay = 0, style = {} }) {
   )
 }
 
-// ─── Section tag label ───────────────────────────────────────────────────────
+// ─── Section tag label ────────────────────────────────────────────────────────
 export function Tag({ children, style = {} }) {
   return (
     <span
       style={{
-        color:         '#9B7845',
+        color:         C.gold,
         fontSize:      '0.65rem',
         letterSpacing: '0.28em',
         fontWeight:    400,
@@ -37,9 +39,7 @@ export function Tag({ children, style = {} }) {
   )
 }
 
-// ─── Gold CTA button ─────────────────────────────────────────────────────────
-import { useState } from 'react'
-
+// ─── Solid gold CTA button ────────────────────────────────────────────────────
 export function GoldButton({ children, onClick, style = {} }) {
   const [hovered, setHovered] = useState(false)
   return (
@@ -48,12 +48,12 @@ export function GoldButton({ children, onClick, style = {} }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background:    hovered ? '#C4A574' : '#9B7845',
+        background:    hovered ? C.goldLight : C.gold,
         border:        'none',
         color:         '#fff',
         fontSize:      '0.68rem',
         letterSpacing: '0.16em',
-        fontFamily:    "'DM Sans', sans-serif",
+        fontFamily:    SANS,
         padding:       '0.82rem 2.2rem',
         transition:    'background 0.3s',
         cursor:        'pointer',
@@ -65,7 +65,7 @@ export function GoldButton({ children, onClick, style = {} }) {
   )
 }
 
-// ─── Ghost (outline) button ──────────────────────────────────────────────────
+// ─── Ghost (outline) button ───────────────────────────────────────────────────
 export function GhostButton({ children, onClick, style = {} }) {
   const [hovered, setHovered] = useState(false)
   return (
@@ -74,12 +74,12 @@ export function GhostButton({ children, onClick, style = {} }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
-        background:    hovered ? '#9B7845' : 'transparent',
-        border:        '1px solid #9B7845',
-        color:         hovered ? '#fff' : '#9B7845',
+        background:    hovered ? C.gold : 'transparent',
+        border:        `1px solid ${C.gold}`,
+        color:         hovered ? '#fff' : C.gold,
         fontSize:      '0.65rem',
         letterSpacing: '0.16em',
-        fontFamily:    "'DM Sans', sans-serif",
+        fontFamily:    SANS,
         padding:       '0.5rem 1.4rem',
         transition:    'all 0.3s',
         cursor:        'pointer',

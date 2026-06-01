@@ -17,36 +17,23 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font-family: 'DM Sans', sans-serif; }
+a { text-decoration: none; }
+::selection { background: rgba(155, 120, 69, 0.2); }
 
-button {
-  cursor: pointer;
-  font-family: 'DM Sans', sans-serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-::selection {
-  background: rgba(155, 120, 69, 0.2);
-}
-
+/* ── Animations ─────────────────────────────────────────────── */
 @keyframes marquee {
   from { transform: translateX(0); }
   to   { transform: translateX(-33.333%); }
 }
 
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes menuSlideIn {
+  from { opacity: 0; transform: translateX(100%); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Mobile nav overlay ──────────────────────────────────────── */
+.mobile-menu {
+  animation: menuSlideIn 0.35s ease forwards;
 }
